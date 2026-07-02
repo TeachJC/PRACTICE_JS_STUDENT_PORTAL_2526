@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Profile Page</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+  background: url("https://media.istockphoto.com/id/1410005276/vector/gradient-white-abstract-design-background.jpg") no-repeat center/cover fixed;
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 250px;
+    background: #111;
+    color: white;
+    min-height: 100vh;
+    padding: 20px 15px;
+}
+
+.sidebar img {
+    width: 100%;
+    max-width: 180px;
+    margin-bottom: 20px;
+}
+
+.nav-link {
+    color: #ccc;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    background: #333;
+    color: #fff !important;
+    transform: translateX(5px);
+}
+
+/* Profile Image */
+.profile-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+}
+
+/* Info Box */
+.info-box {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: rgba(50,49,48,0.7);
+  color: white;
+  font-size: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="d-flex flex-column flex-md-row">
+
+  <!-- Sidebar -->
+  <nav class="sidebar bg-dark text-white p-3">
+    <div class="text-center mb-3">
+      <img src="proj_logo.png" class="logo">
+    </div>
+
+    <ul class="nav flex-column">
+      <li><a class="nav-link text-white" href="dashboard.html">Dashboard</a></li>
+      <li><a class="nav-link text-white" href="notebooks.html">Virtual Notebooks</a></li>
+      <li><a class="nav-link text-white" href="tasks.html">Tasks</a></li>
+      <li><a class="nav-link text-white" href="#">Profile</a></li>
+      <li><a class="nav-link text-white" onclick="logout()">Logout</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="flex-grow-1 p-4">
+    <h2 class="bg-dark text-light rounded p-3">PROFILE</h2>
+    <p>Student Information.</p>
+
+    <div class="container">
+      <div class="row g-4 align-items-center justify-content-center">
+
+        <!-- Profile Image -->
+        <div class="col-lg-4 col-md-5 col-sm-12 text-center">
+          <img src="https://www.pngall.com/wp-content/uploads/5/Profile-Transparent.png"
+               class="rounded-circle profile-img mb-3">
+          <input type="file" class="form-control">
+        </div>
+
+        <!-- Info -->
+        <div class="col-lg-6 col-md-7 col-sm-12">
+          <div class="info-box p-4">
+
+            <h5 class="mb-3">Student Information</h5>
+
+            <p class="text-secondary mb-1">Student ID</p>
+            <p class="fw-bold">SN123456</p>
+
+            <p class="text-secondary mb-1">Contact Number</p>
+            <p class="fw-bold">+639150000001</p>
+
+            <p class="text-secondary mb-1">Email Address</p>
+            <p class="fw-bold">delacruz.jr@obmontessori.edu.ph</p>
+
+            <p class="text-secondary mb-1">Gender</p>
+            <p class="fw-bold">Male</p>
+
+            <button class="btn btn-info w-100 mt-3" onclick="pwd()">
+              Change Password
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-2">
+  Student Name | Grade & Section ©2026
+</footer>
+
+<script>
+function logout() {
+  if (confirm("Exit now?")) {
+    window.location.href = "index.html";
+  }
+}
+
+function pwd() {
+  alert("Please contact your school administration.");
+}
+</script>
+
+</body>
+</html>
